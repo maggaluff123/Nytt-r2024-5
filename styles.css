@@ -25,16 +25,28 @@ h1 {
     color: #2c3e50;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+/* Grid layout for sangene */
+.song-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 kolonner */
+    gap: 10px;
+    padding: 20px;
 }
 
-li {
+/* Stiler for hver rute */
+.song-grid .song {
     background-color: #ecf0f1;
-    margin: 8px 0;
-    padding: 10px;
-    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
     font-size: 18px;
     color: #34495e;
+    transition: background-color 0.3s ease;
+}
+
+/* Når ruten blir grønn */
+.song-grid .song.clicked {
+    background-color: #27ae60;
+    color: white;
 }
