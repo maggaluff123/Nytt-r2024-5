@@ -1,8 +1,7 @@
-/* Enkelt CSS for å style nettsiden */
+/* Grunnleggende styling for nettsiden */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f4f4f9;
     margin: 0;
     padding: 0;
     display: flex;
@@ -11,42 +10,50 @@ body {
     height: 100vh;
 }
 
-.container {
+/* Header styling */
+h1 {
     text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Styling for containeren som holder gridet */
+#song-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Dynamisk tilpassende kolonner */
+    gap: 10px;
+    max-width: 90%; /* Maks bredde på gridet */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Styling for hver sangrute */
+.song {
     background-color: #fff;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 600px;
-}
-
-h1 {
-    color: #2c3e50;
-}
-
-/* Grid layout for sangene */
-.song-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 kolonner */
-    gap: 10px;
-    padding: 20px;
-}
-
-/* Stiler for hver rute */
-.song-grid .song {
-    background-color: #ecf0f1;
-    padding: 20px;
+    border: 1px solid #ddd;
     text-align: center;
     border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    font-size: 14px; /* Juster skriftstørrelsen for å unngå for stor tekst */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; /* Hindre at teksten går ut over ruten */
     cursor: pointer;
-    font-size: 18px;
-    color: #34495e;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
 }
 
-/* Når ruten blir grønn */
-.song-grid .song.clicked {
-    background-color: #27ae60;
+/* Når en rute blir klikket, gjør den grønn */
+.song.clicked {
+    background-color: #4CAF50;
     color: white;
+    transform: scale(1.05); /* Litt zoom-effekt ved klikk */
+}
+
+/* Responsivitet: Juster størrelse på tekst for små skjermer */
+@media (max-width: 600px) {
+    .song {
+        font-size: 12px; /* Mindre skriftstørrelse på små skjermer */
+        padding: 15px;
+    }
 }
