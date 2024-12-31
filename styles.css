@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+h1 {
+    font-size: 24px;
+}
+table {
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+td {
+    border: 1px solid #000;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    width: 100px;
+    height: 100px;
+}
+td.checked {
+    background-color: #90ee90;
+    text-decoration: line-through;
+}
+td:hover {
+    cursor: pointer;
+    background-color: #d3ffd3;
+}
