@@ -23,7 +23,7 @@ h1 {
     grid-template-columns: repeat(5, 1fr); /* 5 kolonner */
     grid-template-rows: repeat(5, 1fr); /* 5 rader */
     gap: 10px;
-    max-width: 600px; /* Maks bredde på gridet */
+    max-width: 800px; /* Økt bredde for gridet */
     margin: 0 auto;
     padding: 20px;
     width: 100%;
@@ -33,15 +33,15 @@ h1 {
 /* Styling for hver sangrute */
 .song {
     background-color: #fff;
-    padding: 20px;
+    padding: 30px; /* Økt padding for større bokser */
     border: 1px solid #ddd;
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    font-size: 14px; /* Juster skriftstørrelsen */
+    font-size: 16px; /* Økt skriftstørrelse for bedre lesbarhet */
     overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis; /* Hindre at teksten går ut over ruten */
+    white-space: normal; /* Tillater flere linjer med tekst */
+    word-wrap: break-word; /* Teksten brytes hvis den er for lang */
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s ease-in-out;
     height: 100%; /* Sørger for at rutene fyller cellene */
@@ -65,7 +65,7 @@ h1 {
     }
 
     .song {
-        font-size: 12px; /* Mindre skriftstørrelse på små skjermer */
-        padding: 15px;
+        font-size: 14px; /* Mindre skriftstørrelse på små skjermer */
+        padding: 20px; /* Mindre padding på små skjermer */
     }
 }
