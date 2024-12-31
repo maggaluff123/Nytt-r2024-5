@@ -33,7 +33,7 @@ h1 {
 /* Styling for hver sangrute */
 .song {
     background-color: #fff;
-    padding: 20px; /* Redusert padding for lavere høyde */
+    padding: 10px; /* Justert padding for å balansere høyde */
     border: 1px solid #ddd;
     text-align: center;
     border-radius: 8px;
@@ -44,7 +44,7 @@ h1 {
     word-wrap: break-word; /* Teksten brytes hvis den er for lang */
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s ease-in-out;
-    height: 120px; /* Fast høyde for å gjøre rutene lavere */
+    height: 75px; /* Endret høyde til 75px */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,7 +66,7 @@ h1 {
 
     .song {
         font-size: 14px; /* Mindre skriftstørrelse på små skjermer */
-        padding: 15px; /* Mindre padding på små skjermer */
-        height: 100px; /* Enda lavere høyde på små skjermer */
+        padding: 10px; /* Mindre padding på små skjermer */
+        height: 60px; /* Enda lavere høyde på små skjermer */
     }
 }
