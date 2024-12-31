@@ -20,11 +20,13 @@ h1 {
 /* Styling for containeren som holder gridet */
 #song-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Dynamisk tilpassende kolonner */
+    grid-template-columns: repeat(5, 1fr); /* 5 kolonner */
+    grid-template-rows: repeat(5, 1fr); /* 5 rader */
     gap: 10px;
-    max-width: 90%; /* Maks bredde på gridet */
+    max-width: 600px; /* Maks bredde på gridet */
     margin: 0 auto;
     padding: 20px;
+    width: 100%;
 }
 
 /* Styling for hver sangrute */
@@ -35,12 +37,13 @@ h1 {
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    font-size: 14px; /* Juster skriftstørrelsen for å unngå for stor tekst */
+    font-size: 14px; /* Juster skriftstørrelsen */
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis; /* Hindre at teksten går ut over ruten */
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s ease-in-out;
+    height: 100%; /* Sørger for at rutene fyller cellene */
 }
 
 /* Når en rute blir klikket, gjør den grønn */
@@ -52,6 +55,11 @@ h1 {
 
 /* Responsivitet: Juster størrelse på tekst for små skjermer */
 @media (max-width: 600px) {
+    #song-grid {
+        max-width: 100%;
+        padding: 10px;
+    }
+
     .song {
         font-size: 12px; /* Mindre skriftstørrelse på små skjermer */
         padding: 15px;
