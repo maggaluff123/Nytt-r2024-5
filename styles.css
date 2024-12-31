@@ -64,17 +64,17 @@ h1 {
     }
 
     .song {
-        font-size: 18px; /* Større skriftstørrelse på små skjermer */
+        font-size: 12.6px; /* Redusert skriftstørrelse med 30% */
         padding: 20px; /* Økt padding for å gjøre rutene større */
-        height: 120px; /* Økt høyde på mobil for å gjøre rutene større */
+        height: 96px; /* Økt høyde på mobil for å gjøre rutene større, redusert med 20% */
     }
+}
 
-    /* Hvis skjermen er veldig liten (for eksempel mobiltelefoner med lav oppløsning) */
-    @media (max-width: 400px) {
-        .song {
-            font-size: 20px; /* Enda større skriftstørrelse på veldig små skjermer */
-            padding: 25px; /* Økt padding */
-            height: 150px; /* Økt høyde på små skjermer */
-        }
+/* Hvis skjermen er veldig liten (for eksempel mobiltelefoner med lav oppløsning) */
+@media (max-width: 400px) {
+    .song {
+        font-size: 14px; /* Økt skriftstørrelse på små skjermer, reduserte med 30% */
+        padding: 25px; /* Økt padding */
+        height: 120px; /* Økt høyde på små skjermer, redusert med 20% */
     }
 }
