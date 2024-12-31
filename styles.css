@@ -8,13 +8,12 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    flex-direction: column; /* Tillater fleksibilitet til å sentrere innholdet vertikalt */
 }
 
-/* Header styling */
+/* Fjerner overskriften */
 h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
+    display: none; /* Overskriften er skjult for å spare plass */
 }
 
 /* Styling for containeren som holder gridet */
@@ -65,22 +64,17 @@ h1 {
     }
 
     .song {
-        font-size: 14px; /* Mindre skriftstørrelse på små skjermer */
-        padding: 15px; /* Økt padding for å gjøre rutene større */
-        height: 100px; /* Økt høyde på mobil */
-    }
-
-    /* Juster fontstørrelsen på overskriften for små skjermer */
-    h1 {
-        font-size: 22px;
+        font-size: 18px; /* Større skriftstørrelse på små skjermer */
+        padding: 20px; /* Økt padding for å gjøre rutene større */
+        height: 120px; /* Økt høyde på mobil for å gjøre rutene større */
     }
 
     /* Hvis skjermen er veldig liten (for eksempel mobiltelefoner med lav oppløsning) */
     @media (max-width: 400px) {
         .song {
-            font-size: 12px; /* Enda mindre skriftstørrelse på veldig små skjermer */
-            padding: 12px; /* Mindre padding */
-            height: 90px; /* Redusert høyde på små skjermer */
+            font-size: 20px; /* Enda større skriftstørrelse på veldig små skjermer */
+            padding: 25px; /* Økt padding */
+            height: 150px; /* Økt høyde på små skjermer */
         }
     }
 }
