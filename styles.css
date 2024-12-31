@@ -57,7 +57,7 @@ h1 {
     transform: scale(1.05); /* Litt zoom-effekt ved klikk */
 }
 
-/* Responsivitet: Juster størrelse på tekst for små skjermer */
+/* Responsivitet: Juster størrelse på tekst og rutestørrelse for små skjermer */
 @media (max-width: 600px) {
     #song-grid {
         max-width: 100%;
@@ -66,7 +66,21 @@ h1 {
 
     .song {
         font-size: 14px; /* Mindre skriftstørrelse på små skjermer */
-        padding: 10px; /* Mindre padding på små skjermer */
-        height: 60px; /* Enda lavere høyde på små skjermer */
+        padding: 15px; /* Økt padding for å gjøre rutene større */
+        height: 100px; /* Økt høyde på mobil */
+    }
+
+    /* Juster fontstørrelsen på overskriften for små skjermer */
+    h1 {
+        font-size: 22px;
+    }
+
+    /* Hvis skjermen er veldig liten (for eksempel mobiltelefoner med lav oppløsning) */
+    @media (max-width: 400px) {
+        .song {
+            font-size: 12px; /* Enda mindre skriftstørrelse på veldig små skjermer */
+            padding: 12px; /* Mindre padding */
+            height: 90px; /* Redusert høyde på små skjermer */
+        }
     }
 }
