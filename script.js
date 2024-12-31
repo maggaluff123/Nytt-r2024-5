@@ -15,14 +15,21 @@ function getRandomSongs() {
     return shuffled.slice(0, 25); // Hent de første 25 sangene fra den blandede listen
 }
 
-// Når siden lastes inn, vis 25 tilfeldige sanger
+// Når siden lastes inn, vis 25 tilfeldige sanger i et grid
 window.onload = function() {
     const selectedSongs = getRandomSongs();
-    const songList = document.getElementById('song-list');
+    const songGrid = document.getElementById('song-grid');
 
     selectedSongs.forEach(song => {
-        const listItem = document.createElement('li');
-        listItem.textContent = song;
-        songList.appendChild(listItem);
+        const songElement = document.createElement('div');
+        songElement.classList.add('song');
+        songElement.textContent = song;
+
+        // Legger til event listener for å gjøre ruten grønn når man klikker på den
+        songElement.onclick = function() {
+            songElement.classList.toggle('clicked');
+        };
+
+        songGrid.appendChild(songElement);
     });
 }
