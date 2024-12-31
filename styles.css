@@ -27,6 +27,7 @@ h1 {
     margin: 0 auto;
     padding: 20px;
     width: 100%;
+    box-sizing: border-box;
 }
 
 /* Styling for hver sangrute */
@@ -44,6 +45,9 @@ h1 {
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s ease-in-out;
     height: 100%; /* Sørger for at rutene fyller cellene */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Når en rute blir klikket, gjør den grønn */
