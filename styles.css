@@ -11,7 +11,7 @@ body {
     flex-direction: column; /* Tillater fleksibilitet til å sentrere innholdet vertikalt */
 }
 
-/* Overskriften vises */
+/* Styling for overskriften */
 h1 {
     margin-bottom: 20px;
     font-size: 24px;
@@ -48,7 +48,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: calc(100% - 4px); /* Økt bredde med 4px */
+    width: calc(100% - 8px); /* Moderat økt bredde */
 }
 
 /* Når en rute blir klikket, gjør den grønn */
@@ -69,7 +69,7 @@ h1 {
         font-size: 18px; /* Større skriftstørrelse på små skjermer */
         padding: 20px; /* Økt padding for å gjøre rutene større */
         height: 120px; /* Økt høyde på mobil for å gjøre rutene større */
-        width: calc(100% - 4px); /* Økt bredde med 4px på mobil */
+        width: calc(100% - 8px); /* Moderat økt bredde på mobil */
     }
 
     /* Hvis skjermen er veldig liten (for eksempel mobiltelefoner med lav oppløsning) */
@@ -78,7 +78,7 @@ h1 {
             font-size: 20px; /* Enda større skriftstørrelse på veldig små skjermer */
             padding: 25px; /* Økt padding */
             height: 150px; /* Økt høyde på små skjermer */
-            width: calc(100% - 4px); /* Økt bredde med 4px på svært små skjermer */
+            width: calc(100% - 8px); /* Moderat økt bredde på svært små skjermer */
         }
     }
 }
